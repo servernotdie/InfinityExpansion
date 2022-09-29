@@ -59,7 +59,11 @@ public final class StorageSaveFix {
                 Iterator<String> iterator = lines.listIterator();
                 while (iterator.hasNext()) {
                     String line = iterator.next();
-                    String location = line.substring(locationBeginIndex, line.indexOf(':'));
+                    int separatorIndex = line.indexOf(':');
+                    if (separatorIndex == -1) {
+                        continue;
+                    }
+                    String location = line.substring(locationBeginIndex, separatorIndex);
                     String correct = locations.get(location);
 
                     if (correct == null) {
