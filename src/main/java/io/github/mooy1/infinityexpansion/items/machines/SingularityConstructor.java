@@ -242,9 +242,8 @@ public final class SingularityConstructor extends AbstractMachineBlock implement
 
     private static void setProgressID(Location l, @Nullable Integer progressID) {
         if (progressID == null) {
-            StorageCacheUtils.setData(l, "progressid", null);
-        }
-        else {
+            StorageCacheUtils.removeData(l, "progressid");
+        } else {
             StorageCacheUtils.setData(l, "progressid", String.valueOf(progressID));
         }
     }
