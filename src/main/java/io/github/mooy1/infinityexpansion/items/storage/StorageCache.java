@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import com.xzavier0722.mc.plugin.slimefun4.storage.controller.SlimefunBlockData;
+import com.xzavier0722.mc.plugin.slimefun4.storage.util.StorageCacheUtils;
+
 import lombok.Setter;
 
 import org.bukkit.Bukkit;
@@ -25,7 +28,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.common.ChatColors;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.tags.SlimefunTag;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
-import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 
 import net.guizhanss.guizhanlib.minecraft.helper.inventory.ItemStackHelper;
@@ -118,7 +120,12 @@ public final class StorageCache {
         // void excess handler
         menu.addMenuClickHandler(STATUS_SLOT, (p, slot, item, action) -> {
             this.voidExcess = !this.voidExcess;
-            BlockStorage.addBlockInfo(this.menu.getLocation(), VOID_EXCESS, this.voidExcess ? "true" : null);
+            if (this.voidExcess) {
+                StorageCacheUtils.setData(this.menu.getLocation(), VOID_EXCESS, "true");
+            } else {
+                StorageCacheUtils.removeData(this.menu.getLocation(), VOID_EXCESS);
+            }
+
             ItemMeta meta = item.getItemMeta();
             List<String> lore = meta.getLore();
             lore.set(1, this.voidExcess ? VOID_EXCESS_TRUE : VOID_EXCESS_FALSE);
@@ -253,10 +260,13 @@ public final class StorageCache {
     }
 
     void reloadData() {
-        Config config = BlockStorage.getLocationInfo(this.menu.getLocation());
-        String amt = config.getString(STORED_AMOUNT);
+        SlimefunBlockData blockData = StorageCacheUtils.getBlock(this.menu.getLocation());
+        if (blockData == null || !blockData.isDataLoaded()) {
+            return;
+        }
+        String amt = blockData.getData(STORED_AMOUNT);
         this.amount = amt == null ? 0 : Integer.parseInt(amt);
-        this.voidExcess = "true".equals(config.getString(VOID_EXCESS));
+        this.voidExcess = "true".equals(blockData.getData(VOID_EXCESS));
     }
 
     void load(ItemStack stored, ItemMeta copy) {
@@ -341,7 +351,7 @@ public final class StorageCache {
         output();
 
         // store amount
-        BlockStorage.addBlockInfo(this.menu.getLocation(), STORED_AMOUNT, String.valueOf(this.amount));
+        StorageCacheUtils.setData(this.menu.getLocation(), STORED_AMOUNT, String.valueOf(this.amount));
 
         // status
         if (this.menu.hasViewer()) {

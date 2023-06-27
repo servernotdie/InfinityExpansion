@@ -10,6 +10,9 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
+import com.xzavier0722.mc.plugin.slimefun4.storage.controller.SlimefunBlockData;
+import com.xzavier0722.mc.plugin.slimefun4.storage.util.StorageCacheUtils;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -37,7 +40,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.ItemUtils;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
-import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import me.mrCookieSlime.Slimefun.api.inventory.DirtyChestMenu;
@@ -98,7 +100,7 @@ public final class StorageUnit extends MenuBlock implements DistinctiveItem {
             }
 
             @Override
-            public void tick(Block b, SlimefunItem item, Config data) {
+            public void tick(Block b, SlimefunItem item, SlimefunBlockData data) {
                 StorageCache cache = StorageUnit.this.caches.get(b.getLocation());
                 if (cache != null) {
                     cache.tick(b);
@@ -109,7 +111,7 @@ public final class StorageUnit extends MenuBlock implements DistinctiveItem {
 
             @Override
             public void onPlayerBreak(BlockBreakEvent e, ItemStack item, List<ItemStack> drops) {
-                BlockMenu menu = BlockStorage.getInventory(e.getBlock());
+                BlockMenu menu = StorageCacheUtils.getMenu(e.getBlock().getLocation());
                 StorageCache cache = StorageUnit.this.caches.remove(menu.getLocation());
                 if (cache != null && !cache.isEmpty()) {
                     cache.destroy(e, drops);
@@ -125,7 +127,7 @@ public final class StorageUnit extends MenuBlock implements DistinctiveItem {
 
     @Override
     protected void onNewInstance(@Nonnull BlockMenu menu, @Nonnull Block b) {
-        if (BlockStorage.getInventory(b) == menu) {
+        if (StorageCacheUtils.getMenu(b.getLocation()) == menu) {
             this.caches.put(b.getLocation(), new StorageCache(this, menu));
         }
     }
