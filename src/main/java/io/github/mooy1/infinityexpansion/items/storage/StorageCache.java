@@ -321,7 +321,7 @@ public final class StorageCache {
     }
 
     private void output() {
-        if (this.amount == 0) {
+        if (this.amount == 0 || this.material == null) {
             return;
         }
         ItemStack outputSlot = this.menu.getItemInSlot(OUTPUT_SLOT);
