@@ -38,7 +38,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.ItemUtils;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
-import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
@@ -74,10 +73,10 @@ public final class StorageUnit extends MenuBlock implements DistinctiveItem {
     /* Menu items */
     private static final ItemStack INTERACTION_ITEM = new CustomItemStack(Material.LIME_STAINED_GLASS_PANE,
             "&a快捷操作",
-            "&b左键: &7取出 1 个物品",
-            "&b右键: &7取出 1 组物品",
-            "&bShift + 左键: &7全部放入",
-            "&bShift + 右键: &7全部取出"
+            "&b左键：&7取出 1 个物品",
+            "&b右键：&7取出 1 组物品",
+            "&bShift+左键：&7全部放入",
+            "&bShift+右键：&7全部取出"
     );
     private static final ItemStack LOADING_ITEM = new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE,
             "&b状态",
@@ -209,7 +208,7 @@ public final class StorageUnit extends MenuBlock implements DistinctiveItem {
     public static ItemMeta saveToStack(ItemMeta meta, ItemStack displayItem, String displayName, int amount) {
         if (meta.hasLore()) {
             List<String> lore = meta.getLore();
-            lore.add(ChatColor.GOLD + "已储存: " + displayName + ChatColor.YELLOW + " x " + amount);
+            lore.add(ChatColor.GOLD + "已储存：" + displayName + ChatColor.YELLOW + " x " + amount);
             meta.setLore(lore);
         }
         meta.getPersistentDataContainer().set(ITEM_KEY, PersistentType.ITEM_STACK_OLD, displayItem);

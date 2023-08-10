@@ -49,8 +49,8 @@ public final class StorageCache {
 
     /* Menu strings */
     private static final String EMPTY_DISPLAY_NAME = ChatColor.WHITE + "空";
-    private static final String VOID_EXCESS_TRUE = ChatColors.color("&7存储满时清空输入:&e 开");
-    private static final String VOID_EXCESS_FALSE = ChatColors.color("&7存储满时清空输入:&e 关");
+    private static final String VOID_EXCESS_TRUE = ChatColors.color("&7满载时清空输入:&e 开");
+    private static final String VOID_EXCESS_FALSE = ChatColors.color("&7满载时清空输入:&e 关");
 
     /* BlockStorage keys */
     private static final String STORED_AMOUNT = "stored"; // amount key in block data
@@ -382,16 +382,16 @@ public final class StorageCache {
             meta.setDisplayName(ChatColor.AQUA + "状态");
             List<String> lore = new ArrayList<>();
             if (this.amount == 0) {
-                lore.add(ChatColors.color("&6已储存: &e0 / " + MachineLore.format(this.storageUnit.max) + " &7(0%)"));
+                lore.add(ChatColors.color("&6已储存：&e0 / " + MachineLore.format(this.storageUnit.max) + " &7(0%)"));
             }
             else {
-                lore.add(ChatColors.color("&6已储存: &e" + MachineLore.format(this.amount)
+                lore.add(ChatColors.color("&6已储存：&e" + MachineLore.format(this.amount)
                         + " / " + MachineLore.format(this.storageUnit.max)
                         + " &7(" + MachineLore.format((double) this.amount * 100.D / this.storageUnit.max) + "%)"
                 ));
             }
             lore.add(this.voidExcess ? VOID_EXCESS_TRUE : VOID_EXCESS_FALSE);
-            lore.add(ChatColor.GRAY + "(点击开关)");
+            lore.add(ChatColor.GRAY + "(点击切换)");
             meta.setLore(lore);
         }), false);
     }
