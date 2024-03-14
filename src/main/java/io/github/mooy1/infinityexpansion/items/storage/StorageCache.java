@@ -150,7 +150,8 @@ public final class StorageCache {
                         withdraw(p, this.amount - 1);
                     }
                     else {
-                        withdraw(p, Math.min(this.material.getMaxStackSize(), this.amount - 1));
+                        final int maxStackSize = this.material != null ? this.material.getMaxStackSize() : 1;
+                        withdraw(p, Math.min(maxStackSize, this.amount - 1));
                     }
                 }
                 else {
@@ -254,6 +255,11 @@ public final class StorageCache {
         }
 
         ItemStack drop = this.storageUnit.getItem().clone();
+        ItemStack displayItem = this.menu.getItemInSlot(DISPLAY_SLOT);
+        if (displayItem == null || displayItem.getType().isAir()) {
+            e.getPlayer().sendMessage(ChatColor.RED + "物品丢失，无法恢复");
+            return;
+        }
         drop.setItemMeta(StorageUnit.saveToStack(drop.getItemMeta(), this.menu.getItemInSlot(DISPLAY_SLOT), this.displayName, this.amount));
         e.getPlayer().sendMessage(ChatColor.GREEN + "物品仍保存在存储单元中");
         drops.add(drop);
