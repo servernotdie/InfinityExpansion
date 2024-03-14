@@ -258,10 +258,10 @@ public final class StorageCache {
         ItemStack displayItem = this.menu.getItemInSlot(DISPLAY_SLOT);
         if (displayItem == null || displayItem.getType().isAir()) {
             e.getPlayer().sendMessage(ChatColor.RED + "物品丢失，无法恢复");
-            return;
+        } else {
+            drop.setItemMeta(StorageUnit.saveToStack(drop.getItemMeta(), this.menu.getItemInSlot(DISPLAY_SLOT), this.displayName, this.amount));
+            e.getPlayer().sendMessage(ChatColor.GREEN + "物品仍保存在存储单元中");
         }
-        drop.setItemMeta(StorageUnit.saveToStack(drop.getItemMeta(), this.menu.getItemInSlot(DISPLAY_SLOT), this.displayName, this.amount));
-        e.getPlayer().sendMessage(ChatColor.GREEN + "物品仍保存在存储单元中");
         drops.add(drop);
     }
 
