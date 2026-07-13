@@ -41,8 +41,8 @@ Truy cập [trang giới thiệu phiên bản chính thức](https://github.com/
 
 ## Này bản fork từ upstream của nhóm dev người TQ xong dịch :D ờ có công tui patch hỗ trợ folia nữa :D 
 
-- Mà mấy đường link tải trực tiếp trên readme này tại tui lười chỉnh với muốn ghi công của họ , khuyên nên tải từ release 
-- Có thể bản dịch không đúng lắm mong thông cảm dùm 
+- Mà mấy đường link tải trực tiếp trên readme này tại tui lười chỉnh với muốn ghi công của họ , khuyên nên tải từ release.
+- Có thể bản dịch không đúng lắm mong thông cảm dùm.
 
 Credit: 
 ---
