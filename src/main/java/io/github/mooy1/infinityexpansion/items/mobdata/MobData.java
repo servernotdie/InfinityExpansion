@@ -27,22 +27,22 @@ public final class MobData {
     public static final SlimefunItemStack EMPTY_DATA_CARD = new SlimefunItemStack(
             "EMPTY_DATA_CARD",
             Material.CHAINMAIL_CHESTPLATE,
-            "&8空生物芯片",
-            "&7需要注入生物掉落物"
+            "&8Chip sinh vật trống",
+            "&7Cần tiêm vật phẩm rơi từ sinh vật"
     );
     public static final SlimefunItemStack INFUSER = new SlimefunItemStack(
             "DATA_INFUSER",
             Material.LODESTONE,
-            "&8生物芯片注入器",
-            "&7将生物掉落物注入生物芯片",
+            "&8Máy tiêm chip sinh vật",
+            "&7Tiêm vật phẩm rơi từ sinh vật vào chip",
             "",
-            MachineLore.energy(INFUSER_ENERGY) + "每次使用"
+            MachineLore.energy(INFUSER_ENERGY) + " mỗi lần"
     );
     public static final SlimefunItemStack CHAMBER = new SlimefunItemStack(
             "MOB_SIMULATION_CHAMBER",
             Material.GILDED_BLACKSTONE,
-            "&8生物模拟室",
-            "&7使用生物芯片激活",
+            "&8Phòng mô phỏng sinh vật",
+            "&7Kích hoạt bằng chip sinh vật",
             "",
             MachineLore.energyBuffer(CHAMBER_BUFFER),
             MachineLore.energyPerSecond(CHAMBER_ENERGY)

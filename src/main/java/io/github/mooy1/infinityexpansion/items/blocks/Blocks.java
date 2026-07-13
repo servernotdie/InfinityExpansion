@@ -19,24 +19,24 @@ public final class Blocks {
     public static final SlimefunItemStack STRAINER_BASE = new SlimefunItemStack(
             "STRAINER_BASE",
             Material.SANDSTONE_WALL,
-            "&7滤网底座"
+            "&7Đế lưới lọc"
     );
     public static final SlimefunItemStack ADVANCED_ANVIL = new SlimefunItemStack(
             "ADVANCED_ANVIL",
             Material.SMITHING_TABLE,
-            "&c高级铁砧",
-            "&7将相同附魔合并升级",
-            "&b可使用粘液科技物品",
+            "&cĐe cao cấp",
+            "&7Kết hợp và nâng cấp phù phép giống nhau",
+            "&bCó thể sử dụng vật phẩm Slimefun",
             "",
-            MachineLore.energy(100000) + "每次使用"
+            MachineLore.energy(100000) + " mỗi lần"
     );
     public static final SlimefunItemStack INFINITY_FORGE = new SlimefunItemStack(
             "INFINITY_FORGE",
             Material.RESPAWN_ANCHOR,
-            "&6无尽工作台",
-            "&7用于制造无尽物品",
+            "&6Bàn chế tạo vô tận",
+            "&7Dùng để chế tạo vật phẩm vô tận",
             "",
-            MachineLore.energy(10000000) + "每个物品"
+            MachineLore.energy(10000000) + " mỗi vật phẩm"
     );
 
     public static void setup(InfinityExpansion plugin) {

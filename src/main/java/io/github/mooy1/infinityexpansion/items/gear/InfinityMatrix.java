@@ -28,12 +28,12 @@ public final class InfinityMatrix extends SimpleSlimefunItem<ItemUseHandler> imp
     }
 
     private static void disableFlight(Player p) {
-        p.sendMessage(ChatColor.RED + "无尽飞行已禁用!");
+        p.sendMessage(ChatColor.RED + "Bay vô tận đã bị tắt!");
         p.setAllowFlight(false);
     }
 
     private static void enableFlight(Player p) {
-        p.sendMessage(ChatColor.GREEN + "无尽飞行已启用!");
+        p.sendMessage(ChatColor.GREEN + "Bay vô tận đã được bật!");
         p.setAllowFlight(true);
     }
 
@@ -62,7 +62,7 @@ public final class InfinityMatrix extends SimpleSlimefunItem<ItemUseHandler> imp
                     String uuid = ChatColor.stripColor(line).substring(6);
 
                     if (!p.getUniqueId().toString().equals(uuid)) {
-                        p.sendMessage(ChatColor.YELLOW + "你不是飞行器的主人!");
+                        p.sendMessage(ChatColor.YELLOW + "Bạn không phải là chủ nhân của cánh bay!");
                         return;
                     }
 
@@ -70,7 +70,7 @@ public final class InfinityMatrix extends SimpleSlimefunItem<ItemUseHandler> imp
                         iterator.remove();
                         meta.setLore(lore);
                         item.setItemMeta(meta);
-                        p.sendMessage(ChatColor.GOLD + "已解除绑定飞行器!");
+                        p.sendMessage(ChatColor.GOLD + "Đã hủy ràng buộc cánh bay!");
                         disableFlight(p);
 
                     }
@@ -88,7 +88,7 @@ public final class InfinityMatrix extends SimpleSlimefunItem<ItemUseHandler> imp
             lore.add(ChatColor.GREEN + "UUID: " + p.getUniqueId());
             meta.setLore(lore);
             item.setItemMeta(meta);
-            p.sendMessage(ChatColor.GOLD + "已绑定飞行器!");
+            p.sendMessage(ChatColor.GOLD + "Đã ràng buộc cánh bay!");
             enableFlight(p);
         };
     }

@@ -34,86 +34,86 @@ public final class Gear {
     public static final SlimefunItemStack ENDER_FLAME = new SlimefunItemStack(
             "ENDER_FLAME",
             Material.ENCHANTED_BOOK,
-            "&c末影之焰"
+            "&cNgọn lửa Ender"
     );
     public static final SlimefunItemStack CROWN = new SlimefunItemStack(
             "INFINITY_CROWN",
             Material.NETHERITE_HELMET,
-            "&b无尽头盔",
-            "&7夜视 I",
-            "&7潮涌能量 I",
-            "&7鞘翅动能免疫"
+            "&bMũ vô tận",
+            "&7Nhìn đêm I",
+            "&7Sức mạnh thủy triều I",
+            "&7Miễn nhiễm động năng khiên cánh"
     );
     public static final SlimefunItemStack CHESTPLATE = new SlimefunItemStack(
             "INFINITY_CHESTPLATE",
             Material.NETHERITE_CHESTPLATE,
-            "&b无尽胸甲",
-            "&7力量 II",
-            "&7生命提升 I",
-            "&7火焰抗性 I",
-            "&7蜜蜂毒针保护"
+            "&bGiáp ngực vô tận",
+            "&7Sức mạnh II",
+            "&7Tăng sinh lực I",
+            "&7Kháng lửa I",
+            "&7Bảo vệ khỏi nọc ong"
     );
     public static final SlimefunItemStack LEGGINGS = new SlimefunItemStack(
             "INFINITY_LEGGINGS",
             Material.NETHERITE_LEGGINGS,
-            "&b无尽护腿",
-            "&7急迫 III",
-            "&7生命恢复 I",
-            "&7饱和 I",
-            "&7抗辐射"
+            "&bQuần vô tận",
+            "&7Hối hả III",
+            "&7Hồi phục I",
+            "&7No bụng I",
+            "&7Kháng phóng xạ"
     );
     public static final SlimefunItemStack BOOTS = new SlimefunItemStack(
             "INFINITY_BOOTS",
             Material.NETHERITE_BOOTS,
-            "&b无尽靴子",
-            "&7速度 III",
-            "&7海豚的恩惠 I"
+            "&bỦng vô tận",
+            "&7Tốc độ III",
+            "&7Ân huệ của cá heo I"
     );
     public static final SlimefunItemStack INFINITY_MATRIX = new SlimefunItemStack(
             "INFINITY_MATRIX",
             Material.NETHER_STAR,
-            "&f无尽飞行器",
-            "&6给予你像创造模式一样的飞行能力",
-            "&7右键 启用/关闭飞行并且绑定自己",
-            "&7蹲下右键移除自己的绑定",
-            "&b灵魂绑定"
+            "&fCánh bay vô tận",
+            "&6Cho bạn khả năng bay như chế độ sáng tạo",
+            "&7Nhấp chuột phải để bật/tắt bay và tự ràng buộc",
+            "&7Nhấp chuột phải khi ngồi để gỡ ràng buộc",
+            "&bRàng buộc linh hồn"
     );
     public static final SlimefunItemStack SHIELD = new SlimefunItemStack(
             "INFINITY_SHIELD",
             Material.SHIELD,
-            "&b宇宙神盾"
+            "&bKhiên vũ trụ"
     );
     public static final SlimefunItemStack BLADE = new SlimefunItemStack(
             "INFINITY_BLADE",
             Material.NETHERITE_SWORD,
-            "&b寰宇支配之剑"
+            "&bKiếm thống trị hoàn vũ"
     );
     public static final SlimefunItemStack PICKAXE = new SlimefunItemStack(
             "INFINITY_PICKAXE",
             Material.NETHERITE_PICKAXE,
-            "&9世界崩解之镐"
+            "&9Cúp phá hủy thế giới"
     );
     public static final SlimefunItemStack AXE = new SlimefunItemStack(
             "INFINITY_AXE",
             Material.NETHERITE_AXE,
-            "&4自然荒芜之斧"
+            "&4Rìu hoang phế tự nhiên"
     );
     public static final SlimefunItemStack SHOVEL = new SlimefunItemStack(
             "INFINITY_SHOVEL",
             Material.NETHERITE_SHOVEL,
-            "&a星球吞噬之铲"
+            "&aXẻng nuốt chửng hành tinh"
     );
     public static final SlimefunItemStack BOW = new SlimefunItemStack(
             "INFINITY_BOW",
             Material.BOW,
-            "&6天堂陨落长弓"
+            "&6Cung sa ngã thiên đường"
     );
     public static final SlimefunItemStack VEIN_MINER_RUNE = new SlimefunItemStack(
             "VEIN_MINER_RUNE",
             Material.DIAMOND,
-            "&b矿脉符文",
-            "&7升级工具以开采某些材料",
-            "&7将此符文与工具融合"
+            "&bBùa mạch quặng",
+            "&7Nâng cấp công cụ để khai thác một số vật liệu",
+            "&7Kết hợp bùa này với công cụ"
     );
 
     public static void setup(InfinityExpansion plugin) {
@@ -142,8 +142,8 @@ public final class Gear {
                 null, null, null, null, null, null
         }).register(plugin);
         new InfinityArmor(CHESTPLATE, new PotionEffect[] {
-                new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 600, 0, false, false, false),
-                new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 600, 1, false, false, false),
+                new PotionEffect(PotionEffectType.RESISTANCE, 600, 0, false, false, false),
+                new PotionEffect(PotionEffectType.STRENGTH, 600, 1, false, false, false),
                 new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 600, 0, false, false, false)
         }, new ItemStack[] {
                 null, Materials.INFINITE_INGOT, null, null, Materials.INFINITE_INGOT, null,
@@ -154,7 +154,7 @@ public final class Gear {
                 null, Materials.INFINITE_INGOT, Materials.INFINITE_INGOT, Materials.INFINITE_INGOT, Materials.INFINITE_INGOT, null
         }).register(plugin);
         new InfinityArmor(LEGGINGS, new PotionEffect[] {
-                new PotionEffect(PotionEffectType.FAST_DIGGING, 600, 2, false, false, false),
+                new PotionEffect(PotionEffectType.HASTE, 600, 2, false, false, false),
                 new PotionEffect(PotionEffectType.REGENERATION, 600, 0, false, false, false),
                 new PotionEffect(PotionEffectType.SATURATION, 600, 0, false, false, false),
         }, new ItemStack[] {
@@ -258,7 +258,7 @@ public final class Gear {
             else {
                 lore = new ArrayList<>();
             }
-            lore.add(ChatColor.AQUA + "灵魂绑定");
+            lore.add(ChatColor.AQUA + "Ràng buộc linh hồn");
             meta.setLore(lore);
 
             // find path

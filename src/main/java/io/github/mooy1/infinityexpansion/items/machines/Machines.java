@@ -27,24 +27,24 @@ public final class Machines {
     public static final SlimefunItemStack COBBLE_PRESS = new SlimefunItemStack(
             "COBBLE_PRESS",
             Material.SMOOTH_STONE,
-            "&8圆石压缩机",
-            "&7高效压缩圆石",
+            "&8Máy nén đá cuội",
+            "&7Nén đá cuội hiệu quả",
             "",
             MachineLore.energyPerSecond(120)
     );
     public static final SlimefunItemStack RESOURCE_SYNTHESIZER = new SlimefunItemStack(
             "RESOURCE_SYNTHESIZER",
             Material.LODESTONE,
-            "&6资源合成器",
-            "&7通过两种材料合成资源",
+            "&6Máy tổng hợp tài nguyên",
+            "&7Tổng hợp tài nguyên từ hai loại vật liệu",
             "",
-            MachineLore.energy(1_000_000) + "每次使用"
+            MachineLore.energy(1_000_000) + " mỗi lần"
     );
     public static final SlimefunItemStack BASIC_GROWER = new SlimefunItemStack(
             "BASIC_VIRTUAL_FARM",
             Material.GRASS_BLOCK,
-            "&9基础&a自动农场",
-            "&7自动种植、收获和再种植作物",
+            "&9Cơ bản&aTrang trại tự động",
+            "&7Tự động trồng, thu hoạch và trồng lại cây trồng",
             "",
             MachineLore.speed(1),
             MachineLore.energyPerSecond(18)
@@ -52,8 +52,8 @@ public final class Machines {
     public static final SlimefunItemStack ADVANCED_GROWER = new SlimefunItemStack(
             "ADVANCED_VIRTUAL_FARM",
             Material.CRIMSON_NYLIUM,
-            "&c高级&a自动农场",
-            "&7自动种植、收获和再种植作物",
+            "&cCao cấp&aTrang trại tự động",
+            "&7Tự động trồng, thu hoạch và trồng lại cây trồng",
             "",
             MachineLore.speed(5),
             MachineLore.energyPerSecond(90)
@@ -61,8 +61,8 @@ public final class Machines {
     public static final SlimefunItemStack INFINITY_GROWER = new SlimefunItemStack(
             "INFINITY_VIRTUAL_FARM",
             Material.WARPED_NYLIUM,
-            "&b无尽&a自动农场",
-            "&7自动种植、收获和再种植作物",
+            "&bVô Tận&aTrang trại tự động",
+            "&7Tự động trồng, thu hoạch và trồng lại cây trồng",
             "",
             MachineLore.speed(25),
             MachineLore.energyPerSecond(900)
@@ -70,8 +70,8 @@ public final class Machines {
     public static final SlimefunItemStack BASIC_TREE = new SlimefunItemStack(
             "BASIC_TREE_GROWER",
             Material.STRIPPED_OAK_WOOD,
-            "&9基础&2自动植树机",
-            "&7自动种植、收获和再种植树木",
+            "&9Cơ bản&2Máy trồng cây tự động",
+            "&7Tự động trồng, thu hoạch và trồng lại cây",
             "",
             MachineLore.speed(1),
             MachineLore.energyPerSecond(36)
@@ -79,8 +79,8 @@ public final class Machines {
     public static final SlimefunItemStack ADVANCED_TREE = new SlimefunItemStack(
             "ADVANCED_TREE_GROWER",
             Material.STRIPPED_ACACIA_WOOD,
-            "&c高级&2自动植树机",
-            "&7自动种植、收获和再种植树木",
+            "&cCao cấp&2Máy trồng cây tự động",
+            "&7Tự động trồng, thu hoạch và trồng lại cây",
             "",
             MachineLore.speed(5),
             MachineLore.energyPerSecond(180)
@@ -88,8 +88,8 @@ public final class Machines {
     public static final SlimefunItemStack INFINITY_TREE = new SlimefunItemStack(
             "INFINITY_TREE_GROWER",
             Material.STRIPPED_WARPED_HYPHAE,
-            "&b无尽&2自动植树机",
-            "&7自动种植、收获和再种植树木",
+            "&bVô Tận&2Máy trồng cây tự động",
+            "&7Tự động trồng, thu hoạch và trồng lại cây",
             "",
             MachineLore.speed(25),
             MachineLore.energyPerSecond(1800)
@@ -98,9 +98,9 @@ public final class Machines {
     public static final SlimefunItemStack POWERED_BEDROCK = new SlimefunItemStack(
             "POWERED_BEDROCK",
             Material.NETHERITE_BLOCK,
-            "&4充能基岩",
-            "&7通电后变成基岩",
-            "&7失去充能后可被破坏",
+            "&4Đá gốc nạp năng lượng",
+            "&7Trở thành đá gốc khi có điện",
+            "&7Có thể bị phá hủy khi mất năng lượng",
             "",
             MachineLore.energyPerSecond(BEDROCK_ENERGY)
     );
@@ -109,27 +109,27 @@ public final class Machines {
     public static final SlimefunItemStack GEO_QUARRY = new SlimefunItemStack(
             "GEO_QUARRY",
             Material.QUARTZ_BRICKS,
-            "&f地理资源矿机",
-            "&7利用电力缓慢获取地理资源",
-            "&7无需地形扫描",
-            "&7不受剩余地理资源数量影响",
+            "&fMáy đào tài nguyên địa lý",
+            "&7Sử dụng điện để thu thập tài nguyên địa lý chậm",
+            "&7Không cần quét địa hình",
+            "&7Không bị ảnh hưởng bởi số lượng tài nguyên địa lý còn lại",
             "",
             MachineLore.energyPerSecond(GEO_QUARRY_ENERGY)
     );
     public static final SlimefunItemStack EXTREME_FREEZER = new SlimefunItemStack(
             "EXTREME_FREEZER",
             Material.LIGHT_BLUE_CONCRETE,
-            "&b极寒冰柜",
-            "&7将冰转化为冷却剂",
-            "&7将岩浆块转化为下界冰冷却剂",
+            "&bTủ đông cực lạnh",
+            "&7Chuyển đá thành chất làm mát",
+            "&7Chuyển khối magma thành chất làm mát băng Nether",
             "",
             MachineLore.energyPerSecond(90)
     );
     public static final SlimefunItemStack DUST_EXTRACTOR = new SlimefunItemStack(
             "DUST_EXTRACTOR",
             Material.FURNACE,
-            "&8磨粉机",
-            "&7将圆石变为矿粉",
+            "&8Máy nghiền",
+            "&7Biến đá cuội thành bụi quặng",
             "",
             MachineLore.speed(1),
             MachineLore.energyPerSecond(240)
@@ -137,8 +137,8 @@ public final class Machines {
     public static final SlimefunItemStack INFINITY_DUST_EXTRACTOR = new SlimefunItemStack(
             "INFINITY_DUST_EXTRACTOR",
             Material.FURNACE,
-            "&b无尽&8磨粉机",
-            "&7将圆石变为矿粉",
+            "&bVô Tận&8Máy nghiền",
+            "&7Biến đá cuội thành bụi quặng",
             "",
             MachineLore.speed(16),
             MachineLore.energyPerSecond(7200)
@@ -146,8 +146,8 @@ public final class Machines {
     public static final SlimefunItemStack INGOT_FORMER = new SlimefunItemStack(
             "INGOT_FORMER",
             Material.FURNACE,
-            "&8铸锭机",
-            "&7将矿粉变为锭",
+            "&8Máy đúc thỏi",
+            "&7Biến bụi quặng thành thỏi",
             "",
             MachineLore.speed(1),
             MachineLore.energyPerSecond(240)
@@ -155,8 +155,8 @@ public final class Machines {
     public static final SlimefunItemStack INFINITY_INGOT_FORMER = new SlimefunItemStack(
             "INFINITY_INGOT_FORMER",
             Material.FURNACE,
-            "&b无尽&8铸锭机",
-            "&7将矿粉变为锭",
+            "&bVô Tận&8Máy đúc thỏi",
+            "&7Biến bụi quặng thành thỏi",
             "",
             MachineLore.speed(16),
             MachineLore.energyPerSecond(7200)
@@ -164,16 +164,16 @@ public final class Machines {
     public static final SlimefunItemStack URANIUM_EXTRACTOR = new SlimefunItemStack(
             "URANIUM_EXTRACTOR",
             Material.LIME_CONCRETE,
-            "&a铀提取器",
-            "&7将圆石变为铀",
+            "&aMáy chiết xuất Uranium",
+            "&7Biến đá cuội thành Uranium",
             "",
             MachineLore.energyPerSecond(240)
     );
     public static final SlimefunItemStack DECOMPRESSOR = new SlimefunItemStack(
             "DECOMPRESSOR",
             Material.TARGET,
-            "&7分解机",
-            "&7将方块还原成基础材料",
+            "&7Máy phân hủy",
+            "&7Khôi phục khối thành vật liệu cơ bản",
             "",
             MachineLore.energyPerSecond(60)
     );
@@ -181,15 +181,15 @@ public final class Machines {
     public static final SlimefunItemStack GEAR_TRANSFORMER = new SlimefunItemStack(
             "GEAR_TRANSFORMER",
             Material.EMERALD_BLOCK,
-            "&7装备材质转换器",
-            "&7改变原版工具或装备的材质",
+            "&7Máy chuyển đổi chất liệu trang bị",
+            "&7Thay đổi chất liệu của công cụ hoặc trang bị vanilla",
             "",
-            MachineLore.energy(GEAR_TRANSFORMER_ENERGY) + "每次使用"
+            MachineLore.energy(GEAR_TRANSFORMER_ENERGY) + " mỗi lần"
     );
     public static final SlimefunItemStack BASIC_COBBLE = new SlimefunItemStack(
             "BASIC_COBBLE_GEN",
             Material.SMOOTH_STONE,
-            "&9基础&8圆石生成器",
+            "&9Cơ bản&8Máy tạo đá cuội",
             "",
             MachineLore.speed(1),
             MachineLore.energyPerSecond(24)
@@ -197,7 +197,7 @@ public final class Machines {
     public static final SlimefunItemStack ADVANCED_COBBLE = new SlimefunItemStack(
             "ADVANCED_COBBLE_GEN",
             Material.SMOOTH_STONE,
-            "&c高级&8圆石生成器",
+            "&cCao cấp&8Máy tạo đá cuội",
             "",
             MachineLore.speed(4),
             MachineLore.energyPerSecond(120)
@@ -205,7 +205,7 @@ public final class Machines {
     public static final SlimefunItemStack INFINITY_COBBLE = new SlimefunItemStack(
             "INFINITY_COBBLE_GEN",
             Material.SMOOTH_STONE,
-            "&c无尽&8圆石生成器",
+            "&cVô Tận&8Máy tạo đá cuội",
             "",
             MachineLore.speed(64),
             MachineLore.energyPerSecond(800)
@@ -213,7 +213,7 @@ public final class Machines {
     public static final SlimefunItemStack BASIC_OBSIDIAN = new SlimefunItemStack(
             "BASIC_OBSIDIAN_GEN",
             Material.SMOOTH_STONE,
-            "&8黑曜石生成器",
+            "&8Máy tạo đá hắc diện",
             "",
             MachineLore.speed(1),
             MachineLore.energyPerSecond(240)
@@ -221,8 +221,8 @@ public final class Machines {
     public static final SlimefunItemStack SINGULARITY_CONSTRUCTOR = new SlimefunItemStack(
             "SINGULARITY_CONSTRUCTOR",
             Material.QUARTZ_BRICKS,
-            "&f奇点构造机",
-            "&7凝聚大量资源",
+            "&fMáy chế tạo Kỳ Dị",
+            "&7Ngưng tụ lượng lớn tài nguyên",
             "",
             MachineLore.speed(1),
             MachineLore.energyPerSecond(120)
@@ -230,8 +230,8 @@ public final class Machines {
     public static final SlimefunItemStack INFINITY_CONSTRUCTOR = new SlimefunItemStack(
             "INFINITY_CONSTRUCTOR",
             Material.CHISELED_QUARTZ_BLOCK,
-            "&b无尽&f奇点构造机",
-            "&7快速凝聚大量资源",
+            "&bVô Tận&fMáy chế tạo Kỳ Dị",
+            "&7Ngưng tụ lượng lớn tài nguyên nhanh chóng",
             "",
             MachineLore.speed(64),
             MachineLore.energyPerSecond(1200)
@@ -239,16 +239,16 @@ public final class Machines {
     public static final SlimefunItemStack STONEWORKS_FACTORY = new SlimefunItemStack(
             "STONEWORKS_FACTORY",
             Material.BLAST_FURNACE,
-            "&8石材厂",
-            "&7生成圆石并将其加工成各种材料",
+            "&8Nhà máy đá",
+            "&7Tạo đá cuội và chế biến thành nhiều vật liệu khác nhau",
             "",
             MachineLore.energyPerSecond(240)
     );
     public static final SlimefunItemStack VOID_HARVESTER = new SlimefunItemStack(
             "VOID_HARVESTER",
             Material.OBSIDIAN,
-            "&8虚空收集者",
-            "&7从虚无中缓慢收集&8虚空粒",
+            "&8Người thu thập Hư Không",
+            "&7Thu thập &8Hạt Hư Không &7từ hư vô",
             "",
             MachineLore.speed(1),
             MachineLore.energyPerSecond(120)
@@ -256,8 +256,8 @@ public final class Machines {
     public static final SlimefunItemStack INFINITE_VOID_HARVESTER = new SlimefunItemStack(
             "INFINITE_VOID_HARVESTER",
             Material.CRYING_OBSIDIAN,
-            "&b无尽&8虚空收集者",
-            "&7从虚无中收集&8虚空粒",
+            "&bVô Tận&8Người thu thập Hư Không",
+            "&7Thu thập &8Hạt Hư Không &7từ hư vô",
             "",
             MachineLore.speed(64),
             MachineLore.energyPerSecond(12000)
@@ -265,8 +265,8 @@ public final class Machines {
     public static final SlimefunItemStack CONCRETE_MOLDING_MACHINE = new SlimefunItemStack(
         "CONCRETE_MOLDING_MACHINE",
         Material.FURNACE,
-        "&8混凝土浇筑机",
-        "&7全自动浇筑混凝土",
+        "&8Máy đổ bê tông",
+        "&7Đổ bê tông hoàn toàn tự động",
         "",
         MachineLore.speed(8),
         MachineLore.energyPerSecond(80)

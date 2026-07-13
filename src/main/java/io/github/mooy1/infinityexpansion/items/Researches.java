@@ -20,14 +20,14 @@ public final class Researches {
     private static final int FIRST_RESEARCH_ID = 314000000;
 
     public static void setup() {
-        create(0, "harvesting_void", "虚空收集者", 35,
+        create(0, "harvesting_void", "Người thu thập Hư Không", 35,
                 Materials.VOID_BIT, Materials.VOID_DUST, Materials.VOID_INGOT, Machines.VOID_HARVESTER
         );
-        create(1, "infinity_gear", "无尽套装", 60,
+        create(1, "infinity_gear", "Bộ giáp Vô Tận", 60,
                 Gear.AXE, Gear.BLADE, Gear.BOW, Gear.PICKAXE, Gear.SHOVEL, Gear.SHIELD,
                 Gear.CROWN, Gear.CHESTPLATE, Gear.LEGGINGS, Gear.BOOTS, Gear.INFINITY_MATRIX
         );
-        create(2, "singularities", "奇点！", 35,
+        create(2, "singularities", "Kỳ Dị!", 35,
                 Materials.ALUMINUM_SINGULARITY,
                 Materials.SILVER_SINGULARITY,
                 Materials.COPPER_SINGULARITY,
@@ -47,58 +47,58 @@ public final class Researches {
                 Machines.SINGULARITY_CONSTRUCTOR,
                 Machines.RESOURCE_SYNTHESIZER
         );
-        create(3, "infinity_ingot", "无尽锭的制作方式", 40,
+        create(3, "infinity_ingot", "Cách chế tạo thỏi Vô Tận", 40,
                 Materials.EARTH_SINGULARITY, Materials.FORTUNE_SINGULARITY, Materials.MAGIC_SINGULARITY,
                 Materials.METAL_SINGULARITY, Materials.INFINITE_INGOT, Blocks.INFINITY_FORGE
         );
-        create(4, "harvesting_end", "末地收集", 20,
+        create(4, "harvesting_end", "Thu thập End", 20,
                 Materials.ENDER_ESSENCE, Gear.ENDER_FLAME, Gear.VEIN_MINER_RUNE
         );
-        create(5, "mob_data", "模拟生物农场", 30,
+        create(5, "mob_data", "Trang trại mô phỏng sinh vật", 30,
                 MobData.CHAMBER, MobData.EMPTY_DATA_CARD, MobData.INFUSER,
                 MobData.COW, MobData.SHEEP, MobData.CHICKEN
         );
-        create(6, "oscillators", "改进矿机", 30,
+        create(6, "oscillators", "Cải tiến máy đào", 30,
                 Quarries.DIAMOND_OSCILLATOR, Quarries.EMERALD_OSCILLATOR, Quarries.LAPIS_OSCILLATOR,
                 Quarries.REDSTONE_OSCILLATOR, Quarries.QUARTZ_OSCILLATOR
         );
-        create(7, "machine_materials", "机器材料", 20,
+        create(7, "machine_materials", "Vật liệu máy móc", 20,
                 Materials.MAGSTEEL, Materials.MAGSTEEL_PLATE, Materials.MACHINE_CIRCUIT,
                 Materials.MACHINE_CORE, Materials.MACHINE_PLATE
         );
-        create(8, "compressed_cobble", "压缩圆石", 15,
+        create(8, "compressed_cobble", "Đá cuội nén", 15,
                 Materials.COBBLE_1, Materials.COBBLE_2, Materials.COBBLE_3,
                 Materials.COBBLE_4, Materials.COBBLE_5, Machines.COBBLE_PRESS
         );
-        create(9, "starter_machines", "初始机器", 15,
+        create(9, "starter_machines", "Máy móc ban đầu", 15,
                 Machines.BASIC_COBBLE, Machines.BASIC_GROWER,
                 Machines.BASIC_TREE, Quarries.BASIC_QUARRY
         );
-        create(10, "strainers", "滤网", 10,
+        create(10, "strainers", "Lưới lọc", 10,
                 Blocks.STRAINER_BASE, Materials.BASIC_STRAINER,
                 Materials.ADVANCED_STRAINER, Materials.REINFORCED_STRAINER
         );
-        create(11, "starter_power", "初始电力", 15,
+        create(11, "starter_power", "Năng lượng ban đầu", 15,
                 Generators.BASIC_PANEL, Generators.HYDRO
         );
-        create(12, "advanced_power", "进阶电力", 35,
+        create(12, "advanced_power", "Năng lượng nâng cao", 35,
                 Generators.ADVANCED_PANEL, Generators.GEOTHERMAL, Generators.REINFORCED_HYDRO,
                 Generators.REINFORCED_GEOTHERMAL, Generators.CELESTIAL_PANEL,
                 SlimefunExtension.ADVANCED_NETHER_STAR_REACTOR
         );
-        create(13, "advanced_machines", "进阶机器", 40,
+        create(13, "advanced_machines", "Máy móc nâng cao", 40,
                 Machines.DUST_EXTRACTOR, Machines.EXTREME_FREEZER, Machines.GEO_QUARRY,
                 Machines.DECOMPRESSOR, Machines.STONEWORKS_FACTORY, Machines.BASIC_OBSIDIAN,
                 Machines.INGOT_FORMER, Blocks.ADVANCED_ANVIL, Machines.URANIUM_EXTRACTOR,
                 Machines.GEAR_TRANSFORMER
         );
-        create(14, "upgraded_machines", "升级机器", 40,
+        create(14, "upgraded_machines", "Máy móc nâng cấp", 40,
                 SlimefunExtension.ADVANCED_CHARGER, SlimefunExtension.ADVANCED_ENCHANTER,
                 SlimefunExtension.ADVANCED_DISENCHANTER, SlimefunExtension.ADVANCED_SMELTERY,
                 Machines.ADVANCED_COBBLE, Machines.ADVANCED_GROWER, Machines.ADVANCED_TREE,
                 SlimefunExtension.ADVANCED_GEO_MINER, Quarries.ADVANCED_QUARRY
         );
-        create(15, "infinity_upgrades", "无尽升级", 80,
+        create(15, "infinity_upgrades", "Nâng cấp Vô Tận", 80,
                 Machines.INFINITE_VOID_HARVESTER, Machines.INFINITY_COBBLE, Machines.INFINITY_CONSTRUCTOR,
                 Machines.INFINITY_GROWER, Machines.INFINITY_TREE, Machines.INFINITY_INGOT_FORMER,
                 Generators.INFINITE_PANEL, Generators.INFINITY_REACTOR, Storage.INFINITY_STORAGE,
@@ -106,30 +106,30 @@ public final class Researches {
                 SlimefunExtension.INFINITY_DISENCHANTER, SlimefunExtension.INFINITY_ENCHANTER,
                 Quarries.INFINITY_QUARRY, Machines.INFINITY_DUST_EXTRACTOR
         );
-        create(16, "void_upgrades", "虚空升级", 45,
+        create(16, "void_upgrades", "Nâng cấp Hư Không", 45,
                 Generators.VOID_PANEL, SlimefunExtension.VOID_CAPACITOR, Storage.VOID_STORAGE,
                 Machines.POWERED_BEDROCK, Quarries.VOID_QUARRY
         );
-        create(17, "advanced_alloys", "无尽合金", 30,
+        create(17, "advanced_alloys", "Hợp kim Vô Tận", 30,
                 Materials.TITANIUM, Materials.ADAMANTITE, Materials.MAGNONIUM, Materials.MYTHRIL
         );
-        create(18, "big_storage", "大型存储容器", 20,
+        create(18, "big_storage", "Thùng chứa lớn", 20,
                 Storage.STORAGE_FORGE, Storage.BASIC_STORAGE, Storage.ADVANCED_STORAGE, Storage.REINFORCED_STORAGE
         );
-        create(19, "infinity_materials", "无尽材料", 40,
+        create(19, "infinity_materials", "Vật liệu Vô Tận", 40,
                 Materials.INFINITY_SINGULARITY, Materials.INFINITE_CORE, Materials.INFINITE_CIRCUIT
         );
-        create(20, "neutral_mob_data", "中立生物芯片", 25,
+        create(20, "neutral_mob_data", "Chip sinh vật trung lập", 25,
                 MobData.SLIME, MobData.MAGMA_CUBE, MobData.BEE, MobData.VILLAGER
         );
-        create(21, "hostile_mob_data", "敌对生物芯片", 30,
+        create(21, "hostile_mob_data", "Chip sinh vật thù địch", 30,
                 MobData.ZOMBIE, MobData.SPIDER, MobData.SKELETON,
                 MobData.CREEPER, MobData.GUARDIAN, MobData.WITCH
         );
-        create(22, "advanced_mob_data", "进阶生物芯片", 45,
+        create(22, "advanced_mob_data", "Chip sinh vật nâng cao", 45,
                 MobData.WITHER_SKELETON, MobData.ENDERMEN, MobData.IRON_GOLEM, MobData.BLAZE
         );
-        create(23, "boss_mob_data", "首领生物芯片", 60,
+        create(23, "boss_mob_data", "Chip sinh vật thủ lĩnh", 60,
                 MobData.WITHER, MobData.ENDER_DRAGON
         );
     }

@@ -1,10 +1,10 @@
-# InfinityExpansion 无尽贪婪
+# InfinityExpansion
 
-此附属增加了许多的游戏后期物品，比如需要消耗大量资源的"无尽锭"。无尽锭可以用来制作功能强大的装备与机器。
+Plugin addon này bổ sung nhiều vật phẩm cuối game, như "Thỏi vô cực" tiêu tốn nhiều tài nguyên. Thỏi vô cực có thể dùng để chế tạo trang bị và máy móc mạnh mẽ.
 
-## 下载
+## Tải xuống
 
-点击这里下载 InfinityExpansion: [下载 InfinityExpansion](https://builds.guizhanss.net/SlimefunGuguProject/InfinityExpansion/master)
+Nhấn vào đây để tải InfinityExpansion: [Tải InfinityExpansion](https://builds.guizhanss.net/SlimefunGuguProject/InfinityExpansion/master)
 
 <p align="center">
   <a href="https://github.com/SlimefunGuguProject/InfinityExpansion/actions/workflows/maven.yml">
@@ -16,25 +16,34 @@
   </a>
 </p>
 
-## Bug/建议
+## Lỗi/Góp ý
 
-提交新的issue, pull request, 或在Discord上联系我:@Riley#5911
+Gửi issue mới, pull request, hoặc liên hệ tôi trên Discord: @Riley#5911
 
-如使用非官方版本，请在此仓库提交issue或pull request。
+Nếu sử dụng phiên bản không chính thức, vui lòng gửi issue hoặc pull request tại kho này.
 
-[加入 Slimefun 官方Discord频道](https://discord.gg/slimefun)  
-[加入 Slimefun 附属社区频道](https://discord.gg/SqD3gg5SAU)
+[Tham gia kênh Discord chính thức của Slimefun](https://discord.gg/slimefun)  
+[Tham gia kênh cộng đồng addon Slimefun](https://discord.gg/SqD3gg5SAU)
 
-## 材质包
+## Gói tài nguyên
 
-适用于本附属插件的资源包(需要 Optifine):
+Gói tài nguyên cho plugin addon này (cần Optifine):
 
 https://github.com/Mooy1/InfinityExpansion/releases/tag/v1
 
-ybw0014 整合的资源包:
+Gói tài nguyên do ybw0014 tổng hợp:
 
 https://ybw0014.net/post/guizhancraft-resource-pack
 
-## 更新日志
+## Nhật ký cập nhật
 
-前往 [官方版介绍页面](https://github.com/Mooy1/InfinityExpansion#changelog) 查看。
+Truy cập [trang giới thiệu phiên bản chính thức](https://github.com/Mooy1/InfinityExpansion#changelog) để xem.
+
+## Này bản fork từ upstream của nhóm dev người TQ xong dịch :D ờ có công tui patch hỗ trợ folia nữa :D 
+
+- Mà mấy đường link tải trực tiếp trên readme này tại tui lười chỉnh với muốn ghi công của họ , khuyên nên tải từ release 
+- Có thể bản dịch không đúng lắm mong thông cảm dùm 
+
+Credit: 
+---
+[SlimefunGuguProject](https://github.com/SlimefunGuguProject/InfinityExpansion)
