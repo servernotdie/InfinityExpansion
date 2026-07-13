@@ -72,15 +72,15 @@ public final class StorageUnit extends MenuBlock implements DistinctiveItem {
 
     /* Menu items */
     private static final ItemStack INTERACTION_ITEM = new CustomItemStack(Material.LIME_STAINED_GLASS_PANE,
-            "&a快捷操作",
-            "&b左键：&7取出 1 个物品",
-            "&b右键：&7取出 1 组物品",
-            "&bShift+左键：&7全部放入",
-            "&bShift+右键：&7全部取出"
+            "&aThao tác nhanh",
+            "&bTrái: &7Lấy 1 vật phẩm",
+            "&bPhải: &7Lấy 1 nhóm vật phẩm",
+            "&bShift+Trái: &7Bỏ tất cả vào",
+            "&bShift+Phải: &7Lấy tất cả ra"
     );
     private static final ItemStack LOADING_ITEM = new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE,
-            "&b状态",
-            "&7加载中..."
+            "&bTrạng thái",
+            "&7Đang tải..."
     );
 
     /* Instance constants */
@@ -208,7 +208,7 @@ public final class StorageUnit extends MenuBlock implements DistinctiveItem {
     public static ItemMeta saveToStack(ItemMeta meta, ItemStack displayItem, String displayName, int amount) {
         if (meta.hasLore()) {
             List<String> lore = meta.getLore();
-            lore.add(ChatColor.GOLD + "已储存：" + displayName + ChatColor.YELLOW + " x " + amount);
+            lore.add(ChatColor.GOLD + "Đã lưu trữ: " + displayName + ChatColor.YELLOW + " x " + amount);
             meta.setLore(lore);
         }
         meta.getPersistentDataContainer().set(ITEM_KEY, PersistentType.ITEM_STACK_OLD, displayItem);

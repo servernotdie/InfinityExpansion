@@ -40,8 +40,8 @@ public final class StoneworksFactory extends AbstractMachineBlock implements Rec
     private static final int STATUS_SLOT = 9;
     private static final int[] CHOICE_SLOTS = { 11, 13, 15 };
     private static final int[] PROCESS_SLOTS = { 10, 12, 14 };
-    private static final ItemStack COBBLE_GEN = new CustomItemStack(Material.GRAY_CONCRETE, "&8圆石生成器");
-    private static final ItemStack PROCESSING = new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&7生产中");
+    private static final ItemStack COBBLE_GEN = new CustomItemStack(Material.GRAY_CONCRETE, "&8Máy tạo đá cuội");
+    private static final ItemStack PROCESSING = new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&7Đang sản xuất");
 
     public StoneworksFactory(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(category, item, recipeType, recipe);
@@ -195,9 +195,9 @@ public final class StoneworksFactory extends AbstractMachineBlock implements Rec
         NONE(
             new CustomItemStack(
                 Material.BARRIER,
-                "&c无操作",
+                "&cKhông hoạt động",
                 "",
-                "&7 > 点击切换"
+                "&7 > Click để chuyển"
             ),
             new Material[0],
             new Material[0]
@@ -205,14 +205,14 @@ public final class StoneworksFactory extends AbstractMachineBlock implements Rec
         FURNACE(
             new CustomItemStack(
                 Material.FURNACE,
-                "&8烧制",
+                "&8Nung",
                 "",
-                "&f圆石 &8=> &f石头",
-                "&f石头 &8=> &f平滑石头",
-                "&f沙子 &8=> &f玻璃",
-                "&f石砖 &8=> &f裂纹石砖",
+                "&fĐá cuội &8=> &fĐá",
+                "&fĐá &8=> &fĐá mịn",
+                "&fCát &8=> &fKính",
+                "&fGạch đá &8=> &fGạch đá nứt",
                 "",
-                "&7 > 点击切换"
+                "&7 > Click để chuyển"
             ),
             new Material[] { Material.COBBLESTONE, Material.STONE, Material.SAND, Material.STONE_BRICKS },
             new Material[] { Material.STONE, Material.SMOOTH_STONE, Material.GLASS, Material.CRACKED_STONE_BRICKS }
@@ -220,12 +220,12 @@ public final class StoneworksFactory extends AbstractMachineBlock implements Rec
         CRUSH(
             new CustomItemStack(
                 Material.DIAMOND_PICKAXE,
-                "&8粉碎",
+                "&8Nghiền",
                 "",
-                "&f圆石 &8=> &f沙砾",
-                "&f沙砾 &8=> &f沙子",
+                "&fĐá cuội &8=> &fSỏi",
+                "&fSỏi &8=> &fCát",
                 "",
-                "&7 > 点击切换"
+                "&7 > Click để chuyển"
             ),
             new Material[] { Material.COBBLESTONE, Material.GRAVEL },
             new Material[] { Material.GRAVEL, Material.SAND }
@@ -233,15 +233,15 @@ public final class StoneworksFactory extends AbstractMachineBlock implements Rec
         COMPACT(
             new CustomItemStack(
                 Material.PISTON,
-                "&8压实",
+                "&8Nén",
                 "",
-                "&f石头 &8=> &f石砖",
-                "&f花岗岩 &8=> &f磨制花岗岩",
-                "&f闪长岩 &8=> &f磨制闪长岩",
-                "&f安山岩 &8=> &f磨制安山岩",
-                "&f沙子 &8=> &f沙石",
+                "&fĐá &8=> &fGạch đá",
+                "&fGranit &8=> &fGranit đánh bóng",
+                "&fDiorit &8=> &fDiorit đánh bóng",
+                "&fAndesit &8=> &fAndesit đánh bóng",
+                "&fCát &8=> &fĐá sa thạch",
                 "",
-                "&7 > 点击切换"
+                "&7 > Click để chuyển"
             ),
             new Material[] { Material.STONE, Material.GRANITE, Material.DIORITE, Material.ANDESITE, Material.SAND },
             new Material[] { Material.STONE_BRICKS, Material.POLISHED_GRANITE, Material.POLISHED_DIORITE, Material.POLISHED_ANDESITE, Material.SANDSTONE }
@@ -249,13 +249,13 @@ public final class StoneworksFactory extends AbstractMachineBlock implements Rec
         TRANSFORM(
             new CustomItemStack(
                 Material.ANDESITE,
-                "&8转化",
+                "&8Chuyển hóa",
                 "",
-                "&f圆石 &8=> &f安山岩",
-                "&f安山岩 &8=> &f闪长岩",
-                "&f闪长岩 &8=> &f花岗岩",
+                "&fĐá cuội &8=> &fAndesit",
+                "&fAndesit &8=> &fDiorit",
+                "&fDiorit &8=> &fGranit",
                 "",
-                "&7 > 点击切换"
+                "&7 > Click để chuyển"
             ),
             new Material[] { Material.COBBLESTONE, Material.ANDESITE, Material.DIORITE},
             new Material[] { Material.ANDESITE, Material.DIORITE, Material.GRANITE}

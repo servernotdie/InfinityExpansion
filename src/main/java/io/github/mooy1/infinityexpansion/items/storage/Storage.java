@@ -18,8 +18,8 @@ public final class Storage {
     public static final SlimefunItemStack STORAGE_FORGE = new SlimefunItemStack(
             "STORAGE_FORGE",
             Material.BEEHIVE,
-            "&6存储单元工作台",
-            "&7制造或升级存储单元"
+            "&6Bàn chế tạo Storage Unit",
+            "&7Chế tạo hoặc nâng cấp Storage Unit"
     );
 
     private static final int BASIC_AMOUNT = 6400;
@@ -31,32 +31,32 @@ public final class Storage {
     public static final SlimefunItemStack BASIC_STORAGE = new SlimefunItemStack(
             "BASIC_STORAGE",
             Material.OAK_WOOD,
-            "&9基础&8存储单元",
-            "&6容量: &e" + MachineLore.format(BASIC_AMOUNT) + " &e个物品"
+            "&9Cơ bản&8Storage Unit",
+            "&6Dung lượng: &e" + MachineLore.format(BASIC_AMOUNT) + " &evật phẩm"
     );
     public static final SlimefunItemStack ADVANCED_STORAGE = new SlimefunItemStack(
             "ADVANCED_STORAGE",
             Material.DARK_OAK_WOOD,
-            "&c高级&8存储单元",
-            "&6容量: &e" + MachineLore.format(ADVANCED_AMOUNT) + " &e个物品"
+            "&cCao cấp&8Storage Unit",
+            "&6Dung lượng: &e" + MachineLore.format(ADVANCED_AMOUNT) + " &evật phẩm"
     );
     public static final SlimefunItemStack REINFORCED_STORAGE = new SlimefunItemStack(
             "REINFORCED_STORAGE",
             Material.ACACIA_WOOD,
-            "&f超级&8存储单元",
-            "&6容量: &e" + MachineLore.format(REINFORCED_AMOUNT) + " &e个物品"
+            "&fSiêu cấp&8Storage Unit",
+            "&6Dung lượng: &e" + MachineLore.format(REINFORCED_AMOUNT) + " &evật phẩm"
     );
     public static final SlimefunItemStack VOID_STORAGE = new SlimefunItemStack(
             "VOID_STORAGE",
             Material.CRIMSON_HYPHAE,
-            "&8虚空&8存储单元",
-            "&6容量: &e" + MachineLore.format(VOID_AMOUNT) + " &e个物品"
+            "&8Hư Không&8Storage Unit",
+            "&6Dung lượng: &e" + MachineLore.format(VOID_AMOUNT) + " &evật phẩm"
     );
     public static final SlimefunItemStack INFINITY_STORAGE = new SlimefunItemStack(
             "INFINITY_STORAGE",
             Material.WARPED_HYPHAE,
-            "&b无尽&8存储单元",
-            "&6容量: &e" + MachineLore.format(INFINITY_AMOUNT) + " &e个物品"
+            "&bVô Tận&8Storage Unit",
+            "&6Dung lượng: &e" + MachineLore.format(INFINITY_AMOUNT) + " &evật phẩm"
     );
 
     public static void setup(InfinityExpansion plugin) {

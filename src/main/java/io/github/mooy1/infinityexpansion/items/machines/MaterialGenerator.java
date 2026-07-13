@@ -80,7 +80,7 @@ public final class MaterialGenerator extends AbstractMachineBlock implements Rec
     @Nonnull
     @Override
     public String getRecipeSectionLabel(@Nonnull Player p) {
-        return "&7产物";
+        return "&7Sản phẩm";
     }
 
     @Override
@@ -99,7 +99,7 @@ public final class MaterialGenerator extends AbstractMachineBlock implements Rec
         inv.pushItem(output, OUTPUT_SLOTS);
 
         if (inv.hasViewer()) {
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&a生产中..."));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&aĐang sản xuất..."));
         }
 
         return true;

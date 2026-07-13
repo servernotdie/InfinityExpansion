@@ -38,9 +38,9 @@ public final class Oscillator extends SlimefunItem {
         return new SlimefunItemStack(
                 "QUARRY_OSCILLATOR_" + material.name(),
                 material,
-                "&b" + MaterialHelper.getName(material) + " 生产加速器",
-                "&7放置在矿机中",
-                "&7提高 " + (chance * 100) + "% 挖到此矿的几率"
+                "&b" + MaterialHelper.getName(material) + " Máy tăng tốc sản xuất",
+                "&7Đặt trong máy đào",
+                "&7Tăng " + (chance * 100) + "% tỷ lệ đào được quặng này"
         );
     }
 

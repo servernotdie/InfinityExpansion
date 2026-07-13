@@ -40,7 +40,7 @@ import me.mrCookieSlime.Slimefun.api.inventory.DirtyChestMenu;
 public final class StrainerBase extends TickingMenuBlock implements RecipeDisplayItem {
 
 
-    private static final ItemStack POTATO = new CustomItemStack(Material.POTATO, "&7:&6土豆鱼&7:", "&e幸运");
+    private static final ItemStack POTATO = new CustomItemStack(Material.POTATO, "&7:&6Cá khoai tây&7:", "&eMay mắn");
     private static final int STATUS_SLOT = 10;
     private static final int[] OUTPUT_SLOTS = {
             13, 14, 15, 16,
@@ -134,7 +134,7 @@ public final class StrainerBase extends TickingMenuBlock implements RecipeDispla
     @Nonnull
     @Override
     public String getRecipeSectionLabel(@Nonnull Player p) {
-        return "&7可收集:";
+        return "&7Có thể thu thập:";
     }
 
     @Override
@@ -153,7 +153,7 @@ public final class StrainerBase extends TickingMenuBlock implements RecipeDispla
         if (speed == 0) {
 
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&c放入滤网!"));
+                inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&cĐặt lưới lọc!"));
             }
 
             return;
@@ -166,7 +166,7 @@ public final class StrainerBase extends TickingMenuBlock implements RecipeDispla
         if (random.nextInt(this.time / speed) != 0) {
 
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&a收集中..."));
+                inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&aĐang thu thập..."));
             }
 
             return;
@@ -196,12 +196,12 @@ public final class StrainerBase extends TickingMenuBlock implements RecipeDispla
         inv.pushItem(output.clone(), OUTPUT_SLOTS);
 
         if (inv.hasViewer()) {
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&a打捞到材料!"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&aĐã vớt được vật liệu!"));
         }
 
         //reduce durability
 
-        if (random.nextInt(strainer.getEnchantmentLevel(Enchantment.DURABILITY) + 3 * strainer.getEnchantmentLevel(Enchantment.MENDING) + 1) == 0) {
+        if (random.nextInt(strainer.getEnchantmentLevel(Enchantment.UNBREAKING) + 3 * strainer.getEnchantmentLevel(Enchantment.MENDING) + 1) == 0) {
             ItemMeta itemMeta = strainer.getItemMeta();
             Damageable durability = (Damageable) itemMeta;
 

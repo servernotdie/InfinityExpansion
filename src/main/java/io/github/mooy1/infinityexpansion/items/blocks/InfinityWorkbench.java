@@ -36,7 +36,7 @@ public final class InfinityWorkbench extends io.github.mooy1.infinitylib.machine
     private static final int RECIPE_SLOT = 7;
     public static final MachineRecipeType TYPE = new MachineRecipeType("infinity_forge",
             new CustomItemStack(Blocks.INFINITY_FORGE, Blocks.INFINITY_FORGE.getDisplayName(),
-                    "", "&c配方显示不完整，请从无尽工作台查看正确的配方!"));
+                    "", "&cCông thức hiển thị không đầy đủ, hãy xem từ bàn chế tạo vô tận!"));
 
     private final int energy;
 
@@ -62,7 +62,7 @@ public final class InfinityWorkbench extends io.github.mooy1.infinitylib.machine
     @Override
     protected void setup(BlockMenuPreset preset) {
         super.setup(preset);
-        preset.addItem(RECIPE_SLOT, new CustomItemStack(Material.BOOK, "&6查看配方"), ChestMenuUtils.getEmptyClickHandler());
+        preset.addItem(RECIPE_SLOT, new CustomItemStack(Material.BOOK, "&6Xem công thức"), ChestMenuUtils.getEmptyClickHandler());
     }
 
     @Override
@@ -79,8 +79,8 @@ public final class InfinityWorkbench extends io.github.mooy1.infinitylib.machine
         int charge = getCharge(menu.getLocation());
         if (charge < this.energy) {
             p.sendMessage(
-                    ChatColor.RED + "电力不足!",
-                    ChatColor.GREEN + "当前电力: " + ChatColor.RED + charge + ChatColor.GREEN + "/" + this.energy + " J"
+                    ChatColor.RED + "Không đủ năng lượng!",
+                    ChatColor.GREEN + "Năng lượng hiện tại: " + ChatColor.RED + charge + ChatColor.GREEN + "/" + this.energy + " J"
             );
         }
         else {

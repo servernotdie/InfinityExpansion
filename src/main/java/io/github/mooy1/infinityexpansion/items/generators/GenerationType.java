@@ -13,13 +13,13 @@ import io.github.mooy1.infinityexpansion.utils.Util;
 @AllArgsConstructor
 public enum GenerationType {
 
-    HYDROELECTRIC("水力") {
+    HYDROELECTRIC("Thủy điện") {
         @Override
         protected int generate(@Nonnull World world, @Nonnull Block block, int def) {
             return Util.isWaterLogged(block) ? def : 0;
         }
     },
-    GEOTHERMAL("地热") {
+    GEOTHERMAL("Địa nhiệt") {
         @Override
         protected int generate(@Nonnull World world, @Nonnull Block block, int def) {
             switch (world.getEnvironment()) {
@@ -32,7 +32,7 @@ public enum GenerationType {
             }
         }
     },
-    SOLAR("太阳能") {
+    SOLAR("Năng lượng mặt trời") {
         @Override
         protected int generate(@Nonnull World world, @Nonnull Block block, int def) {
             if (world.getEnvironment() == World.Environment.NORMAL
@@ -43,7 +43,7 @@ public enum GenerationType {
             return 0;
         }
     },
-    LUNAR("虚空") {
+    LUNAR("Hư Không") {
         @Override
         protected int generate(@Nonnull World world, @Nonnull Block block, int def) {
             switch (world.getEnvironment()) {
@@ -62,7 +62,7 @@ public enum GenerationType {
             }
         }
     },
-    INFINITY("无尽") {
+    INFINITY("Vô Tận") {
         @Override
         protected int generate(@Nonnull World world, @Nonnull Block block, int def) {
             return def;

@@ -37,12 +37,12 @@ public final class Quarry extends AbstractMachineBlock implements RecipeDisplayI
             InfinityExpansion.config().getBoolean("quarry-options.output-nether-materials-in-overworld");
     private static final int INTERVAL =
             InfinityExpansion.config().getInt("quarry-options.ticks-per-output", 1, 100);
-    private static final ItemStack MINING = new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&a采矿中...");
+    private static final ItemStack MINING = new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&aĐang đào...");
     private static final ItemStack OSCILLATOR_INFO = new CustomItemStack(
             Material.CYAN_STAINED_GLASS_PANE,
-            "&b生产加速器槽",
-            "&7放置一个生产加速器",
-            "&7提高某些材料的生产速率!"
+            "&bKhe máy tăng tốc sản xuất",
+            "&7Đặt máy tăng tốc sản xuất",
+            "&7Tăng tỷ lệ sản xuất một số vật liệu!"
     );
     private static final int[] OUTPUT_SLOTS = {
             9, 10, 11, 12, 13, 14, 15, 16, 17,
@@ -153,6 +153,6 @@ public final class Quarry extends AbstractMachineBlock implements RecipeDisplayI
     @Nonnull
     @Override
     public String getRecipeSectionLabel(@Nonnull Player p) {
-        return "&7产物:";
+        return "&7Sản phẩm:";
     }
 }

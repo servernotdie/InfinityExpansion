@@ -49,9 +49,9 @@ import static io.github.mooy1.infinityexpansion.items.storage.StorageUnit.STATUS
 public final class StorageCache {
 
     /* Menu strings */
-    private static final String EMPTY_DISPLAY_NAME = ChatColor.WHITE + "空";
-    private static final String VOID_EXCESS_TRUE = ChatColors.color("&7满载时清空输入:&e 开");
-    private static final String VOID_EXCESS_FALSE = ChatColors.color("&7满载时清空输入:&e 关");
+    private static final String EMPTY_DISPLAY_NAME = ChatColor.WHITE + "Trống";
+    private static final String VOID_EXCESS_TRUE = ChatColors.color("&7Khi đầy thì hủy đầu vào:&e Bật");
+    private static final String VOID_EXCESS_FALSE = ChatColors.color("&7Khi đầy thì hủy đầu vào:&e Tắt");
 
     /* BlockStorage keys */
     private static final String STORED_AMOUNT = "stored"; // amount key in block data
@@ -59,7 +59,7 @@ public final class StorageCache {
 
     /* Menu Items */
     private static final ItemStack EMPTY_ITEM = new CustomItemStack(Material.BARRIER, meta -> {
-        meta.setDisplayName(ChatColor.WHITE + "空");
+        meta.setDisplayName(ChatColor.WHITE + "Trống");
         meta.getPersistentDataContainer().set(EMPTY_KEY, PersistentDataType.BYTE, (byte) 1);
     });
 
@@ -261,10 +261,10 @@ public final class StorageCache {
         ItemStack drop = this.storageUnit.getItem().clone();
         ItemStack displayItem = this.menu.getItemInSlot(DISPLAY_SLOT);
         if (displayItem == null || displayItem.getType().isAir()) {
-            e.getPlayer().sendMessage(ChatColor.RED + "物品丢失，无法恢复");
+            e.getPlayer().sendMessage(ChatColor.RED + "Vật phẩm bị mất, không thể khôi phục");
         } else {
             drop.setItemMeta(StorageUnit.saveToStack(drop.getItemMeta(), this.menu.getItemInSlot(DISPLAY_SLOT), this.displayName, this.amount));
-            e.getPlayer().sendMessage(ChatColor.GREEN + "物品仍保存在存储单元中");
+            e.getPlayer().sendMessage(ChatColor.GREEN + "Vật phẩm vẫn được lưu trong kho");
         }
         drops.add(drop);
     }
@@ -389,19 +389,19 @@ public final class StorageCache {
 
     private void updateStatus() {
         this.menu.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE, meta -> {
-            meta.setDisplayName(ChatColor.AQUA + "状态");
+            meta.setDisplayName(ChatColor.AQUA + "Trạng thái");
             List<String> lore = new ArrayList<>();
             if (this.amount == 0) {
-                lore.add(ChatColors.color("&6已储存：&e0 / " + MachineLore.format(this.storageUnit.max) + " &7(0%)"));
+                lore.add(ChatColors.color("&6Đã lưu: &e0 / " + MachineLore.format(this.storageUnit.max) + " &7(0%)"));
             }
             else {
-                lore.add(ChatColors.color("&6已储存：&e" + MachineLore.format(this.amount)
+                lore.add(ChatColors.color("&6Đã lưu: &e" + MachineLore.format(this.amount)
                         + " / " + MachineLore.format(this.storageUnit.max)
                         + " &7(" + MachineLore.format((double) this.amount * 100.D / this.storageUnit.max) + "%)"
                 ));
             }
             lore.add(this.voidExcess ? VOID_EXCESS_TRUE : VOID_EXCESS_FALSE);
-            lore.add(ChatColor.GRAY + "(点击切换)");
+            lore.add(ChatColor.GRAY + "(Nhấn để chuyển)");
             meta.setLore(lore);
         }), false);
     }

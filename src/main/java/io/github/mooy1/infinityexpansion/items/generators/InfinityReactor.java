@@ -59,7 +59,7 @@ public final class InfinityReactor extends MenuBlock implements EnergyNetProvide
     @Override
     protected void setup(@Nonnull BlockMenuPreset blockMenuPreset) {
         blockMenuPreset.drawBackground(new CustomItemStack(Material.WHITE_STAINED_GLASS_PANE,
-                "&f放入无尽锭"), new int[] {
+                "&fĐặt thỏi Vô Tận vào"), new int[] {
                 0, 1, 2,
                 9, 11,
                 18, 19, 20
@@ -70,7 +70,7 @@ public final class InfinityReactor extends MenuBlock implements EnergyNetProvide
                 21, 22, 23
         });
         blockMenuPreset.drawBackground(new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE,
-                "&8放入虚空锭"), new int[] {
+                "&8Đặt thỏi Hư Không vào"), new int[] {
                 6, 7, 8,
                 15, 17,
                 24, 25, 26
@@ -115,7 +115,7 @@ public final class InfinityReactor extends MenuBlock implements EnergyNetProvide
             if (infinityInput == null || !Materials.INFINITE_INGOT.getItemId().equals(StackUtils.getId(infinityInput))) { //wrong input
 
                 if (inv.hasViewer()) {
-                    inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&c放入更多 &f无尽锭"));
+                    inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&cĐặt thêm &fthỏi Vô Tận"));
                 }
                 return 0;
 
@@ -124,7 +124,7 @@ public final class InfinityReactor extends MenuBlock implements EnergyNetProvide
             if (voidInput == null || !Materials.VOID_INGOT.getItemId().equals(StackUtils.getId(voidInput))) { //wrong input
 
                 if (inv.hasViewer()) {
-                    inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&c放入更多 &8虚空锭"));
+                    inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&cĐặt thêm &8thỏi Hư Không"));
                 }
                 return 0;
 
@@ -133,9 +133,9 @@ public final class InfinityReactor extends MenuBlock implements EnergyNetProvide
             //correct input
             if (inv.hasViewer()) {
                 inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE,
-                        "&a开始发电",
-                        "&a无尽锭可支撑的发电时长: " + INFINITY_INTERVAL,
-                        "&a虚空锭可支撑的发电时长: " + VOID_INTERVAL
+                        "&aBắt đầu phát điện",
+                        "&aThời gian phát điện từ thỏi Vô Tận: " + INFINITY_INTERVAL,
+                        "&aThời gian phát điện từ thỏi Hư Không: " + VOID_INTERVAL
                 ));
             }
             inv.consumeItem(INPUT_SLOTS[0]);
@@ -148,7 +148,7 @@ public final class InfinityReactor extends MenuBlock implements EnergyNetProvide
         if (progress >= INFINITY_INTERVAL) { //done
 
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&a发电完成"));
+                inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&aPhát điện hoàn tất"));
             }
             StorageCacheUtils.setData(l, "progress", "0");
             return this.gen;
@@ -160,7 +160,7 @@ public final class InfinityReactor extends MenuBlock implements EnergyNetProvide
             if (voidInput == null || !Materials.VOID_INGOT.getItemId().equals(StackUtils.getId(voidInput))) { //wrong input
 
                 if (inv.hasViewer()) {
-                    inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&c放入更多 &8虚空锭"));
+                    inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&cĐặt thêm &8thỏi Hư Không"));
                 }
                 return 0;
 
@@ -169,9 +169,9 @@ public final class InfinityReactor extends MenuBlock implements EnergyNetProvide
             //right input
             if (inv.hasViewer()) {
                 inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE,
-                        "&a发电中...",
-                        "&a无尽锭可支撑的发电时长: " + (INFINITY_INTERVAL - progress),
-                        "&a虚空锭可支撑的发电时长: " + (VOID_INTERVAL - Math.floorMod(progress, VOID_INTERVAL))
+                        "&aĐang phát điện...",
+                        "&aThời gian còn lại từ thỏi Vô Tận: " + (INFINITY_INTERVAL - progress),
+                        "&aThời gian còn lại từ thỏi Hư Không: " + (VOID_INTERVAL - Math.floorMod(progress, VOID_INTERVAL))
                 ));
             }
             StorageCacheUtils.setData(l, "progress", String.valueOf(progress + 1));
@@ -184,9 +184,9 @@ public final class InfinityReactor extends MenuBlock implements EnergyNetProvide
 
         if (inv.hasViewer()) {
             inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE,
-                            "&a发电中...",
-                            "&a无尽锭可支撑的发电时长: " + (INFINITY_INTERVAL - progress),
-                            "&a虚空锭可支撑的发电时长: " + (VOID_INTERVAL - Math.floorMod(progress, VOID_INTERVAL))
+                            "&aĐang phát điện...",
+                            "&aThời gian phát điện từ thỏi vô tận: " + (INFINITY_INTERVAL - progress),
+                            "&aThời gian phát điện từ thỏi hư không: " + (VOID_INTERVAL - Math.floorMod(progress, VOID_INTERVAL))
                     )
             );
         }
@@ -205,12 +205,12 @@ public final class InfinityReactor extends MenuBlock implements EnergyNetProvide
         List<ItemStack> items = new ArrayList<>();
 
         ItemStack item = new CustomItemStack(Materials.INFINITE_INGOT, Materials.INFINITE_INGOT.getDisplayName(),
-                "", ChatColor.GOLD + "持续 1 天");
+                "", ChatColor.GOLD + "Kéo dài 1 ngày");
         items.add(item);
         items.add(null);
 
         item = new CustomItemStack(Materials.VOID_INGOT, Materials.VOID_INGOT.getDisplayName(),
-                "", ChatColor.GOLD + "持续 4 小时");
+                "", ChatColor.GOLD + "Kéo dài 4 giờ");
         items.add(item);
         items.add(null);
 

@@ -29,8 +29,8 @@ public final class Quarries {
     public static final SlimefunItemStack BASIC_QUARRY = new SlimefunItemStack(
             "BASIC_QUARRY",
             Material.CHISELED_SANDSTONE,
-            "&9基础矿机",
-            "&7自动挖主世界矿物",
+            "&9Máy đào cơ bản",
+            "&7Tự động đào khoáng sản Overworld",
             "",
             MachineLore.speed(1),
             MachineLore.energyPerSecond(300)
@@ -38,8 +38,8 @@ public final class Quarries {
     public static final SlimefunItemStack ADVANCED_QUARRY = new SlimefunItemStack(
             "ADVANCED_QUARRY",
             Material.CHISELED_RED_SANDSTONE,
-            "&c高级矿机",
-            "&7自动挖主世界和下界矿物",
+            "&cMáy đào cao cấp",
+            "&7Tự động đào khoáng sản Overworld và Nether",
             "",
             MachineLore.speed(2),
             MachineLore.energyPerSecond(900)
@@ -47,8 +47,8 @@ public final class Quarries {
     public static final SlimefunItemStack VOID_QUARRY = new SlimefunItemStack(
             "VOID_QUARRY",
             Material.CHISELED_NETHER_BRICKS,
-            "&8虚空矿机",
-            "&7自动挖主世界和下界矿物",
+            "&8Máy đào hư không",
+            "&7Tự động đào khoáng sản Overworld và Nether",
             "",
             MachineLore.speed(6),
             MachineLore.energyPerSecond(3600)
@@ -56,8 +56,8 @@ public final class Quarries {
     public static final SlimefunItemStack INFINITY_QUARRY = new SlimefunItemStack(
             "INFINITY_QUARRY",
             Material.CHISELED_POLISHED_BLACKSTONE,
-            "&b无尽矿机",
-            "&7自动挖主世界和下界矿物",
+            "&bMáy đào vô tận",
+            "&7Tự động đào khoáng sản Overworld và Nether",
             "",
             MachineLore.speed(64),
             MachineLore.energyPerSecond(36000)
