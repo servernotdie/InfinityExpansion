@@ -19,29 +19,29 @@ import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 public final class GiveRecipe extends SubCommand {
 
     public GiveRecipe() {
-        super("giverecipe", "给予一个 Slimefun 配方中的所有物品", "infinityexpansion.giverecipe");
+        super("giverecipe", "Cho tất cả vật phẩm trong một công thức Slimefun", "infinityexpansion.giverecipe");
     }
 
     @Override
     protected void execute(@Nonnull CommandSender sender, @Nonnull String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage("只有玩家能使用该指令!");
+            sender.sendMessage("Chỉ người chơi mới có thể dùng lệnh này!");
             return;
         }
 
         if (args.length != 1) {
-            sender.sendMessage("用法: /ie giverecipe <ID>");
+            sender.sendMessage("Cách dùng: /ie giverecipe <ID>");
             return;
         }
 
         SlimefunItem sfItem = SlimefunItem.getById(args[0].toUpperCase());
 
         if (sfItem == null || sfItem instanceof MultiBlockMachine || sfItem.getRecipeType() == RecipeType.GEO_MINER) {
-            sender.sendMessage(ChatColor.RED + "无效的 Slimefun 物品!");
+            sender.sendMessage(ChatColor.RED + "Vật phẩm Slimefun không hợp lệ!");
             return;
         }
 
-        sender.sendMessage(ChatColor.GREEN + "已给予 " + sfItem.getItemName() + " 的配方");
+        sender.sendMessage(ChatColor.GREEN + "Đã cho công thức của " + sfItem.getItemName());
 
         Player p = (Player) sender;
 

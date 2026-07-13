@@ -15,7 +15,7 @@ import io.github.mooy1.infinitylib.commands.SubCommand;
 public final class PrintItem extends SubCommand {
 
     public PrintItem() {
-        super("printitem", "(调试)输出物品的内部数据", "infinityexpansion.printitem");
+        super("printitem", "(Gỡ lỗi) Xuất dữ liệu nội bộ của vật phẩm", "infinityexpansion.printitem");
     }
 
     @Override
@@ -29,7 +29,7 @@ public final class PrintItem extends SubCommand {
         ItemStack item = p.getInventory().getItemInMainHand();
 
         if (item.getType() == Material.AIR) {
-            p.sendMessage(ChatColor.RED + "你必须手持一个物品!");
+            p.sendMessage(ChatColor.RED + "Bạn phải cầm một vật phẩm trên tay!");
             return;
         }
 

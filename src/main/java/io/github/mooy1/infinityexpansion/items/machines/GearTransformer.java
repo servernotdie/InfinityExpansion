@@ -44,7 +44,7 @@ public final class GearTransformer extends AbstractEnergyCrafter implements Reci
     };
     private static final ItemStack[] ARMOR_RECIPE = {
             new ItemStack(Material.LEATHER, 9),
-            new ItemStack(Material.CHAIN, 9),
+            new ItemStack(Material.valueOf("IRON_CHAIN"), 9),
             new ItemStack(Material.IRON_INGOT, 9),
             new ItemStack(Material.GOLD_INGOT, 9),
             new ItemStack(Material.DIAMOND, 9),
@@ -99,12 +99,12 @@ public final class GearTransformer extends AbstractEnergyCrafter implements Reci
                 37, 38, 39, 41, 42, 43,
                 48, 49, 50
         });
-        blockMenuPreset.drawBackground(new CustomItemStack(Material.BLUE_STAINED_GLASS_PANE, "&9在此放入工具"), new int[] {
+        blockMenuPreset.drawBackground(new CustomItemStack(Material.BLUE_STAINED_GLASS_PANE, "&9Đặt công cụ vào đây"), new int[] {
                 0, 1, 2,
                 9, 11,
                 18, 19, 20
         });
-        blockMenuPreset.drawBackground(new CustomItemStack(Material.BLUE_STAINED_GLASS_PANE, "&9在此放入材料"), new int[] {
+        blockMenuPreset.drawBackground(new CustomItemStack(Material.BLUE_STAINED_GLASS_PANE, "&9Đặt vật liệu vào đây"), new int[] {
                 6, 7, 8,
                 15, 17,
                 24, 25, 26
@@ -205,13 +205,13 @@ public final class GearTransformer extends AbstractEnergyCrafter implements Reci
 
         if (inputItem == null) { //no input
 
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BLUE_STAINED_GLASS_PANE, "&9请放入工具或护甲"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BLUE_STAINED_GLASS_PANE, "&9Vui lòng đặt công cụ hoặc giáp"));
             return;
 
         }
 
         if (!SF && StackUtils.getId(inputItem) != null) {
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&c粘液科技的物品无法改变材料!"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&cVật phẩm Slimefun không thể thay đổi chất liệu!"));
             return;
         }
 
@@ -219,7 +219,7 @@ public final class GearTransformer extends AbstractEnergyCrafter implements Reci
 
         if (inputToolType == null) { //invalid input
 
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&c无效的装备!"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&cTrang bị không hợp lệ!"));
             return;
 
         }
@@ -228,7 +228,7 @@ public final class GearTransformer extends AbstractEnergyCrafter implements Reci
 
         if (inputMaterial == null) { //no material
 
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BLUE_STAINED_GLASS_PANE, "&9请放入材料"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BLUE_STAINED_GLASS_PANE, "&9Vui lòng đặt vật liệu"));
             return;
 
         }
@@ -237,7 +237,7 @@ public final class GearTransformer extends AbstractEnergyCrafter implements Reci
 
         if (pair == null) { //invalid material
 
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&c无效的材料!"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&cVật liệu không hợp lệ!"));
             return;
 
         }
@@ -258,7 +258,7 @@ public final class GearTransformer extends AbstractEnergyCrafter implements Reci
         inv.replaceExistingItem(INPUT_SLOTS[0], null);
         inv.consumeItem(INPUT_SLOTS[1], pair.getSecondValue());
 
-        inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&a材质转换完成!"));
+        inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&aChuyển đổi chất liệu hoàn tất!"));
     }
 
 }

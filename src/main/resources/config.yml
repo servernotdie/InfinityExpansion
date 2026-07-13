@@ -1,34 +1,34 @@
-# 启用自动更新
+# Bật cập nhật tự động
 auto-update: true
 
 balance-options:
 
-  # 设置奇点消耗材料的倍数
+  # Đặt hệ số nhân nguyên liệu tiêu hao của điểm kỳ dị
   singularity-cost-multiplier: 1.0
 
-  # 允许装备材质转换器更改 Slimefun 中装备的材质。
-  # 钻石装备可升级为下界合金，但部分附属插件的物品可能在升级后无法使用
-  # 请谨慎开启该选项！！
+  # Cho phép bộ chuyển đổi chất liệu trang bị thay đổi chất liệu trang bị trong Slimefun.
+  # Trang bị kim cương có thể nâng cấp lên netherite, nhưng một số vật phẩm từ addon có thể không dùng được sau khi nâng cấp
+  # Hãy cẩn thận khi bật tùy chọn này!!
   allow-sf-item-transform: false
 
-  # 是否启用无尽科技物品的研究
-  # 开启后玩家需要消耗等级来解锁物品（与Slimefun设置一致）
+  # Có bật nghiên cứu cho vật phẩm Infinity Expansion không
+  # Khi bật, người chơi cần tiêu hao cấp độ để mở khóa vật phẩm (giống với cài đặt Slimefun)
   enable-researches: false
 
-# 生物模拟相关设置
+# Cài đặt liên quan đến mô phỏng sinh vật
 mob-simulation-options:
 
-  # 每隔多少粘液刻输出产物和经验
-  # 在没有更改 Slimefun 设置的情况下，1 粘液刻 = 0.5 秒
+  # Cứ mỗi bao nhiêu tick Slimefun xuất sản phẩm và kinh nghiệm
+  # Nếu không thay đổi cài đặt Slimefun, 1 tick Slimefun = 0.5 giây
   ticks-per-output: 20
 
-  # 设置从生物模拟中获取经验的倍率
+  # Đặt hệ số nhân kinh nghiệm nhận được từ mô phỏng sinh vật
   xp-multiplier: 1.0
 
-# 矿机相关设置
+# Cài đặt liên quan đến máy đào
 quarry-options:
 
-  # 每次生成矿物时, 生产加速器激活的概率 (范围: 0~1)
+  # Xác suất kích hoạt máy tăng tốc sản xuất mỗi khi tạo quặng (phạm vi: 0~1)
   oscillators:
     lapis: .5
     diamond: .5
@@ -36,21 +36,21 @@ quarry-options:
     quartz: .5
     emerald: .5
 
-  # 每隔多少粘液刻输出产物
-    #  # 在没有更改 Slimefun 设置的情况下，1 粘液刻 = 0.5 秒
+  # Cứ mỗi bao nhiêu tick Slimefun xuất sản phẩm
+    # Nếu không thay đổi cài đặt Slimefun, 1 tick Slimefun = 0.5 giây
   ticks-per-output: 10
 
-  # 允许在非下界的矿机输出下界产物（石英，下界岩，下界合金）
+  # Cho phép máy đào ở không phải Nether xuất sản phẩm Nether (thạch anh, netherrack, netherite)
   output-nether-materials-in-overworld: false
 
-  # 允许矿机输出哪些资源
+  # Cho phép máy đào xuất những tài nguyên nào
   resources:
 
     coal: true
     iron: true
     gold: true
     lapis: true
-    # 原版铜 (1.17+)
+    # Đồng nguyên bản (1.17+)
     copper: true
     quartz: true
     diamond: true
@@ -59,7 +59,7 @@ quarry-options:
     netherite: true
     netherrack: true
   
-# 设置高级铁砧的附魔等级上限
+# Đặt giới hạn cấp độ phù phép cho đe cao cấp
 advanced-anvil-max-levels:
   sharpness: 9
   bane-of-arthropods: 9
@@ -73,9 +73,9 @@ advanced-anvil-max-levels:
   looting: 6
   unbreaking: 13
 
-# 设置无尽套装的附魔等级，不会影响到已合成的无尽套装
-# 在这里添加其他附魔没有任何效果，你只能更改已有附魔的等级
-# 所有防具的保护等级加起来如果超过20级，则只按照20级来计算
+# Đặt cấp độ phù phép cho bộ giáp vô cực, sẽ không ảnh hưởng đến bộ giáp vô cực đã chế tạo
+# Thêm phù phép khác ở đây không có hiệu lực, bạn chỉ có thể thay đổi cấp độ của phù phép hiện có
+# Nếu tổng cấp độ bảo vệ của tất cả giáp vượt quá 20, thì chỉ tính theo 20
 infinity-enchant-levels:
   blade:
     unbreakable: true

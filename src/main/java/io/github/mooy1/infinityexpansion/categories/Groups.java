@@ -16,24 +16,24 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 public final class Groups {
 
     public static final ItemGroup INFINITY = new InfinityGroup(InfinityExpansion.createKey("infinity_recipes"),
-            new CustomItemStack(Material.RESPAWN_ANCHOR, "&b无尽&7物品"), 3);
+            new CustomItemStack(Material.RESPAWN_ANCHOR, "&bVô Tận&7 vật phẩm"), 3);
     public static final ItemGroup MAIN_MATERIALS = new SubGroup("main_materials",
-            new CustomItemStack(Material.NETHER_STAR, "&b无尽&7基础材料"));
+            new CustomItemStack(Material.NETHER_STAR, "&bVô Tận&7 vật liệu cơ bản"));
     public static final ItemGroup BASIC_MACHINES = new SubGroup("basic_machines",
-            new CustomItemStack(Material.LOOM, "&9无尽&7基础机器"));
+            new CustomItemStack(Material.LOOM, "&9Vô Tận&7 máy móc cơ bản"));
     public static final ItemGroup ADVANCED_MACHINES = new SubGroup("advanced_machines",
-            new CustomItemStack(Material.BLAST_FURNACE, "&c无尽&7高级机器"));
+            new CustomItemStack(Material.BLAST_FURNACE, "&cVô Tận&7 máy móc cao cấp"));
     public static final ItemGroup STORAGE = new SubGroup("storage",
-            new CustomItemStack(Material.BEEHIVE, "&6无尽&7存储"));
+            new CustomItemStack(Material.BEEHIVE, "&6Vô Tận&7 lưu trữ"));
     public static final ItemGroup MOB_SIMULATION = new SubGroup("mob_simulation",
-            new CustomItemStack(Material.BEACON, "&b生物模拟"));
+            new CustomItemStack(Material.BEACON, "&bMô phỏng sinh vật"));
     public static final ItemGroup INFINITY_MATERIALS = new SubGroup("infinity_materials",
-            new CustomItemStack(Material.NETHERITE_BLOCK, "&b无尽&a材料"));
+            new CustomItemStack(Material.NETHERITE_BLOCK, "&bVô Tận&a vật liệu"));
     public static final ItemGroup MAIN_CATEGORY = new MultiGroup("main",
-            new CustomItemStack(Material.NETHER_STAR, "&kl&b无尽&4贪婪&kl"), 3,
+            new CustomItemStack(Material.NETHER_STAR, "&kl&bVô Tận&4 Tham Lam&kl"), 3,
             MAIN_MATERIALS, BASIC_MACHINES, ADVANCED_MACHINES, STORAGE, MOB_SIMULATION, INFINITY_MATERIALS, INFINITY);
     public static final ItemGroup INFINITY_CHEAT = new SubGroup("infinity_cheat",
-            new CustomItemStack(Material.RESPAWN_ANCHOR, "&b无尽&7物品 &c- 错误配方, 请从无尽工作台中查看正确配方"));
+            new CustomItemStack(Material.RESPAWN_ANCHOR, "&bVô Tận&7 vật phẩm &c- Công thức sai, hãy xem công thức đúng từ bàn chế tạo vô tận"));
 
     public static void setup(InfinityExpansion inst) {
         INFINITY.register(inst);
