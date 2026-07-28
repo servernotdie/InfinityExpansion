@@ -60,7 +60,9 @@ jobs:
         run: |
           cd target
           rm -rf original*
-          echo "FILE=$(ls | grep jar)" >> $GITHUB_ENV
+          FILE=$(find . -maxdepth 1 -type f -name "*.jar" ! -name "*-sources.jar" -printf "%f\n")
+          [ -n "$FILE" ]
+          echo "FILE=$FILE" >> "$GITHUB_ENV"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
