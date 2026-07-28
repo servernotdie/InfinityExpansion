@@ -12,20 +12,22 @@ jobs:
   build:
     if: startsWith(github.event.head_commit.message, '[CI skip]') == false
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Set up JDK 21
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 21
           distribution: temurin
 
       - name: Cache Maven packages
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
@@ -39,14 +41,39 @@ jobs:
       - name: Apply patches
         run: bash patches/patch.sh
 
+      - name: Run install script
+        run: if [ -f install.sh ]; then bash install.sh; fi
+
+      - name: Environment Setup
+        id: env-setup
+        run: |
+          SHORT_COMMIT_HASH=$(git rev-parse --short=8 HEAD)
+          TAG="build-$(date +'%Y%m%d')-$SHORT_COMMIT_HASH"
+          echo "SHORT_COMMIT_HASH=$SHORT_COMMIT_HASH" >> "$GITHUB_ENV"
+          echo "SHORT_COMMIT_HASH=$SHORT_COMMIT_HASH" >> "$GITHUB_OUTPUT"
+          echo "TAG=$TAG" >> "$GITHUB_ENV"
+
       - name: Build with Maven
         run: mvn package --file pom.xml
 
-      - name: Get build artifact ready
-        run: mkdir staging && cp target/*.jar staging
+      - name: Get build artifact filename
+        run: |
+          cd target
+          rm -rf original*
+          echo "FILE=$(ls | grep jar)" >> $GITHUB_ENV
 
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.1.0
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: Dev Build
-          path: staging
+          name: ${{ env.FILE }}
+          path: target/${{ env.FILE }}
+
+      - name: Create Release
+        run: |
+          gh release create "$TAG" \
+            --title "InfinityExpansion Build $TAG" \
+            --notes "Auto build from commit ${{ github.sha }}" \
+            --prerelease \
+            "target/$FILE"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
