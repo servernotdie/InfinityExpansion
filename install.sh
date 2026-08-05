@@ -18,18 +18,14 @@ fi
 
 mvn install:install-file \
     -Dfile="${SLIMEFUN_JAR}" \
-    -DgroupId=com.github.servernotdie \
-    -DartifactId=Slimefun4 \
-    -Dversion=79809c0a \
+    -DpomFile="${SCRIPT_DIR}/libs/Slimefun4-79809c0a.pom" \
     -Dpackaging=jar
 
 echo "Installed com.github.servernotdie:Slimefun4:79809c0a into the local Maven repository."
 
 mvn install:install-file \
     -Dfile="${INFINITYLIB_JAR}" \
-    -DgroupId=com.github.servernotdie \
-    -DartifactId=InfinityLib \
-    -Dversion=1.3.10 \
+    -DpomFile="${SCRIPT_DIR}/libs/InfinityLib-1.3.10.pom" \
     -Dpackaging=jar
 
 echo "Installed com.github.servernotdie:InfinityLib:1.3.10 into the local Maven repository."
